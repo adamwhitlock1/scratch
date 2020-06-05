@@ -1,0 +1,611 @@
+/*========== Variables ==========*/
+:root {
+    --dark:#17252A;
+    --light: #DEF2F1;
+    --extra-light: #FEFFFF;
+    --accentOne:#3AAFA9;
+    --accentTwo: #2B7A78;
+}
+
+/*========== Reset ==========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+    border: 0;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*========== Page Styles ==========*/
+body {
+    color: var(--dark);
+    font-family: 'Esteban', serif;
+    font-style: normal;
+    font-size: 14px;
+    background-color: var(--dark);
+    overflow-x: hidden;
+    text-align: center;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/*========== Font Styles ==========*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', san-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h1, h2 {
+    font-weight: 800;
+}
+
+.masthead, .footer {
+    color: var(--light);
+}
+
+/*========== Material Icons Styles ==========*/
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.ico-drop-down {
+    position: relative;
+    display: inline-block;
+    top: 5px;
+}
+
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.25em;
+    display: inline-block;
+    /* vertical-align: middle; */
+    position: relative;
+    top: 5.5px;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/*Controls arrow positioning on submenus for desktop*/
+@media only screen and (min-width: 992px) {
+    [data-sub]:before {
+         content: attr(data-sub);
+         font-family: 'Material Icons';
+         font-weight: normal;
+         font-style: normal;
+         font-size: 3.5em;
+         display: inline-block;
+         /* vertical-align: middle; */
+         position: absolute;
+         top: -29.75px;
+         left: 10px;
+         width: 1em;
+         height: 1em;
+         line-height: 1;
+         text-transform: none;
+         letter-spacing: normal;
+         word-wrap: normal;
+         white-space: nowrap;
+         direction: ltr;
+
+         /* Support for all WebKit browsers. */
+         -webkit-font-smoothing: antialiased;
+
+         /* Support for Safari and Chrome. */
+         text-rendering: optimizeLegibility;
+
+         /* Support for Firefox. */
+         -moz-osx-font-smoothing: grayscale;
+
+         /* Support for IE. */
+         font-feature-settings: 'liga';
+    }
+
+    [data-subsub]:before {
+         content: attr(data-subsub);
+         font-family: 'Material Icons';
+         font-weight: normal;
+         font-style: normal;
+         font-size: 3.5em;
+         display: inline-block;
+         /* vertical-align: middle; */
+         position: absolute;
+         top: 5.25px;
+         left: -29.5px;
+         width: 1em;
+         height: 1em;
+         line-height: 1;
+         text-transform: none;
+         letter-spacing: normal;
+         word-wrap: normal;
+         white-space: nowrap;
+         direction: ltr;
+
+         /* Support for all WebKit browsers. */
+         -webkit-font-smoothing: antialiased;
+
+         /* Support for Safari and Chrome. */
+         text-rendering: optimizeLegibility;
+
+         /* Support for Firefox. */
+         -moz-osx-font-smoothing: grayscale;
+
+         /* Support for IE. */
+         font-feature-settings: 'liga';
+    }
+}
+
+[data-icon], [data-sub] {
+    color: var(--accentOne);
+}
+
+/*========== Nav Styles ==========*/
+.nav-list {
+    text-align: left;
+}
+
+.nav-container {
+    background-color: var(--dark);
+}
+
+.main-nav {
+    background-color: var(--dark);
+}
+
+.nav-item > a {
+    color: var(--accentOne);
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 1.25em;
+    font-weight: 300;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item > a:hover {
+    color: var(--accentTwo);
+    opacity: 0.5;
+}
+
+.nav-item > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    /* top: 30px; */
+    left: 0;
+    background-color: var(--accentOne);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accentOne);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.ham-nav:hover .nav-line, .ham-nav:focus .nav-line {
+    background-color: var(--light);
+}
+
+.masthead, .nav-item, .ham-nav {
+    cursor: pointer;
+}
+
+.subnav-list {
+    display: grid;
+    grid-gap: 5px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+    padding-bottom: 10px;
+
+}
+
+/*Controls submenu and sub-submenu background, position, and hover*/
+@media only screen and (min-width: 992px) {
+    .nav-item > a:before {
+         content: "";
+         display: inline-block;
+         position: absolute;
+         width: 100%;
+         height: 1px;
+         bottom: -4px;
+         top: initial;
+         left: 0;
+         background-color: var(--accentOne);
+         visibility: hidden;
+         -webkit-transform: scaleX(0);
+         transform: scaleX(0);
+         -webkit-transition: all 0.3s ease-in-out 0s;
+         transition: all 0.3s ease-in-out 0s;
+    }
+
+    .nav-item > a:hover:before {
+         visibility: visible;
+         -webkit-transform: scaleX(1);
+         transform: scaleX(1);
+    }
+    .subnav-list {
+         background-color: var(--dark);
+         border-top: 2px solid var(--accentOne);
+         width: 10.5em;
+         padding: 20px;
+         display: grid;
+         grid-gap: 10px;
+         position: absolute;
+         /* top: 5.25vh; */
+         top: 10.25vh;
+         visibility: hidden;
+         opacity: 0;
+         transition: all 0.5s ease-in-out;
+    }
+
+    .subsubnav-list {
+         background-color: var(--dark);
+         border-left: 2px solid var(--accentOne);
+         width: 10.5em;
+         padding: 20px;
+         display: grid;
+         grid-gap: 10px;
+         position: absolute;
+         top: -1.5vh;
+         left: 215px;
+         visibility: hidden;
+         opacity: 0;
+         transition: all 0.5s ease-in-out;
+    }
+
+    .subnav-item-active > .subsubnav-list {
+         left: 139px;
+         opacity: 1;
+         visibility: visible;
+    }
+
+    .nav-item-active > .subnav-list {
+         top: 52px;
+         opacity: 1;
+         visibility: visible;
+    }
+}
+
+.subnav-item, .subsubnav-item {
+    position: relative;
+}
+
+.subnav-item > a, .subsubnav-item > a {
+    color: var(--accentOne);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.subnav-item > a:hover, .subsubnav-item > a:hover {
+    color: var(--accentTwo);
+    opacity: 0.5;
+}
+
+.subnav-item > a:before, .subsubnav-item > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--accentOne);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.subnav-item > a:hover:before, .subsubnav-item > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/*========== Nav Animation Styles ==========*/
+.nav-item {
+    opacity: 0;
+}
+
+.full-opacity {
+    opacity: 1;
+}
+
+.main-nav {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    height: 100%;
+    width: 35vw;
+    transition: all 0.5s ease-in;
+}
+
+.main-nav {
+    transform: translateX(100%);
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.body-deactive {
+    transform: translateX(-35%);
+}
+
+@keyframes navLinkFade {
+    from {
+         opacity: 0;
+         transform: translateX(50%);
+    }
+    to {
+         opacity: 1;
+         transform: translateX(0%);
+    }
+}
+
+.ham-toggle .line-one {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.ham-toggle .line-two {
+    opacity: 0;
+}
+
+.ham-toggle .line-three {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*========== Nav Grid Styles ==========*/
+.nav-container {
+    display: grid;
+    grid-template-columns: 65vw 35vw;
+    align-items: center;
+    justify-items: center;
+}
+
+.ham-nav {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.nav-list {
+    padding-top: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    grid-gap: 25px;
+    padding-left: 20%;
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-list {
+         padding-left: 0;
+         justify-items: center;
+    }
+}
+
+/*========== Page Grid Styles ==========*/
+.page-content {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 65vw 35vw;
+    grid-template-rows: 10vh 9fr 1fr;
+
+    grid-template-areas:
+         "head head"
+         "main main"
+         "foot foot";
+}
+
+.nav-container {
+    grid-area: head;
+}
+
+.main-nav {
+    grid-area: nav;
+}
+
+.main-wrapper {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: foot;
+}
+
+.footer {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+/*========== Content Styles ==========*/
+main.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 20px;
+}
+
+p.body-content {
+    margin-top: 15px;
+}
+
+.main-wrapper {
+    background-image:
+         linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+         url('./assets/HERO-home.jpg');
+    background-color: var(--light);
+    background-repeat: no-repeat;
+    background-position:center top;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    transition: transform 0.5s ease-in;
+}
+
+/*========== Footer Styles ==========*/
+.footer {
+    background-color: var(--dark);
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+/*========== Desktop Grid and Menu Styles ==========*/
+@media only screen and (min-width: 992px) {
+    .page-content {
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         grid-template-rows: auto 1fr auto;
+
+         grid-template-areas:
+              "head nav"
+              "main main"
+              "foot foot";
+    }
+
+    .nav-container {
+         padding-left: 15vw;
+         display: grid;
+         grid-template-columns: 1fr 9fr;
+         align-items: center;
+         justify-items: center;
+
+         grid-template-areas:
+              "ham head"
+    }
+
+    .ham-nav {
+         grid-area: ham;
+         display: none;
+    }
+
+    .masthead {
+         grid-area: head;
+    }
+
+    .main-nav {
+         position: inherit;
+         transform: none;
+         height: auto;
+         width: auto;
+         align-self:center;
+         justify-self: end;
+    }
+
+    .nav-item {
+         opacity: 1;
+         position: relative;
+    }
+
+    .nav-list {
+         padding-top: inherit;
+         padding-right: 15vw;
+         display: grid;
+         grid-template-columns: repeat(5, 1fr);
+         grid-gap: 30px;
+         align-items: end;
+         justify-content: stretch;
+    }
+}

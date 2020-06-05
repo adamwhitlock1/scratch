@@ -11,7 +11,7 @@ function echoYear(dateObj, element) {
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
-    timeZoneName: "long"
+    timeZoneName: "long",
   };
   var setIntro = (getIntro.innerHTML = `Welcome. Today's date is ${new Date().toLocaleDateString(
     "en-US",
@@ -28,6 +28,6 @@ function getDateObj() {
   return { month, day, year };
 }
 
-window.onload = setInterval(function() {
+window.onload = setInterval(function () {
   echoYear(getDateObj(), "#hello");
 }, 1000);

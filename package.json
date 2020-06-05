@@ -8,6 +8,13 @@
     "roll-watch": "rollup main.js --file bundle.js --format iife --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Adam Whitlock <awhitlock@dealerinspire.com>",
+  "license": "ISC",
+  "repository": "https://github.com/adamwhitlock1/scratch.git",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
 }
