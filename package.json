@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "roll-watch": "rollup main.js --file bundle.js --format iife --watch"
   },
   "keywords": [],
@@ -12,9 +12,11 @@
   "license": "ISC",
   "repository": "https://github.com/adamwhitlock1/scratch.git",
   "dependencies": {
+    "chroma-js": "^2.1.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
+    "jest": "^26.1.0",
     "node-sass": "^4.13.1"
   }
 }
